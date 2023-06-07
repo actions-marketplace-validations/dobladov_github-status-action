@@ -4,9 +4,10 @@
   <a href="https://github.com/Sibz/github-status-action"><img alt="github-status-action status" src="https://github.com/Sibz/github-status-action/workflows/build/badge.svg"></a>
 </p>
 
-# GitHub Status Action
+# Action Status 
 
 Adds a status update to a commit. GitHub will always show the latest state of a context.
+Fork of [Sibz/github-status-action](https://github.com/Sibz/github-status-action)
 
 ## Usage
 
@@ -48,7 +49,7 @@ on: # run on any PRs and main branch changes
     steps:
     - uses: actions/checkout@v3
     - name: Run the action # You would run your tests before this using the output to set state/desc
-      uses: Sibz/github-status-action@v1
+      uses: dobladov/action-status@v2
       with: 
         authToken: ${{secrets.GITHUB_TOKEN}}
         context: 'Test run'
